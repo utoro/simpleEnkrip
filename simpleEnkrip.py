@@ -23,7 +23,6 @@ def main():
     if args['print']:
         print(scramble(args['input'], args['key']))
     else:
-        # data = open(args['input'], mode='r', encoding='utf-8').read()
         try:
             data = open(args['input'], mode='r', encoding='utf-8').read()
         except FileNotFoundError:
