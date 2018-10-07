@@ -17,7 +17,7 @@ def main():
     ap.add_argument('-k', '--key', default='R4h4514', help='Key untuk enkripsi')
     ap.add_argument('-i', '--input', required=True, help='Nama file input')
     ap.add_argument('-o', '--output', help='Nama file output', default='output.txt')
-    ap.add_argument('-p', '--print', action='store_true', default=False, help='Key untuk enkripsi')
+    ap.add_argument('-p', '--print', action='store_true', default=False, help='Langsung tampilkan hasil')
     args = vars(ap.parse_args())
 
     if args['print']:
