@@ -1,4 +1,4 @@
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
 from itertools import cycle
 import argparse
 
@@ -39,8 +39,9 @@ def main():
 
 
 if __name__ == '__main__':
-    try:
-        FileNotFoundError
-    except NameError:
+    version = argparse._sys.version_info[0]
+    if version < 3:
+        from io import open
         FileNotFoundError = IOError
+
     main()
