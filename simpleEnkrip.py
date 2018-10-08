@@ -39,4 +39,8 @@ def main():
 
 
 if __name__ == '__main__':
+    try:
+        FileNotFoundError
+    except NameError:
+        FileNotFoundError = IOError
     main()
